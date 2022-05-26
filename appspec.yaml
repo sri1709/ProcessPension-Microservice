@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:156962844638:task-definition/PMS-877629-ProcessPension-Microservice:2"
+        LoadBalancerInfo:
+          ContainerName: "ProcessPension-Microservice-container-877629"
+          ContainerPort: "8100"
+        PlatformVersion: "LATEST"
